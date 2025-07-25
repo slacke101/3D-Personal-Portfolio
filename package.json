@@ -1,22 +1,25 @@
 {
-  "name": "portfolio-rc",
-  "version": "0.1.0",
+  "name": "3d-portfolio",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^10.6.0",
     "@react-three/fiber": "^9.2.0",
-    "cra-template-pwa": "2.0.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^7.7.1",
     "react-scripts": "5.0.1",
-    "three": "^0.178.0"
+    "three": "^0.178.0",
+    "@babel/plugin-transform-class-properties": "^7.23.3",
+    "@babel/plugin-transform-private-property-in-object": "^7.23.4",
+    "eslint": "^9.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prebuild": "cp -r public/* build/ 2>/dev/null || :"
   },
   "eslintConfig": {
     "extends": [
@@ -34,6 +37,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-class-properties",
+      "@babel/plugin-transform-private-property-in-object"
     ]
   }
 }
