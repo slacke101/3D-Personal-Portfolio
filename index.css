@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Monoton&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Bungee Shade', 'Monoton', cursive, sans-serif;
+  background: radial-gradient(circle at 20% 20%, #ffb347 0%, #ffcc33 40%, #ff7043 100%);
+  color: #3a1c00;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
