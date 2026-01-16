@@ -1,0 +1,158 @@
+.stl-viewer-container {
+  width: 100%;
+  margin: 2em 0;
+  background: rgba(15, 15, 25, 0.6);
+  border-radius: 12px;
+  padding: 1.5em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stl-viewer-title {
+  font-size: 1.5em;
+  color: #d73f09;
+  margin: 0 0 1em 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.stl-file-selector {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+
+.stl-file-selector label {
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.stl-select {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(215, 63, 9, 0.3);
+  border-radius: 6px;
+  padding: 0.6em 1em;
+  font-size: 0.95em;
+  font-family: 'Oswald', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 200px;
+}
+
+.stl-select:hover {
+  border-color: rgba(215, 63, 9, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stl-select:focus {
+  outline: none;
+  border-color: #d73f09;
+  box-shadow: 0 0 0 2px rgba(215, 63, 9, 0.2);
+}
+
+.stl-viewer-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.stl-control-btn {
+  background: rgba(215, 63, 9, 0.2);
+  color: #fff;
+  border: 2px solid rgba(215, 63, 9, 0.5);
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  font-size: 0.9em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.stl-control-btn:hover {
+  background: rgba(215, 63, 9, 0.4);
+  border-color: rgba(215, 63, 9, 0.8);
+  transform: translateY(-2px);
+}
+
+.stl-control-hint {
+  color: #b0b0b0;
+  font-size: 0.85em;
+  font-style: italic;
+}
+
+.stl-canvas-wrapper {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(215, 63, 9, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.stl-canvas-wrapper canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Loading state */
+.stl-viewer-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(215, 63, 9, 0.3);
+  border-top: 4px solid #d73f09;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stl-viewer-container {
+    padding: 1em;
+  }
+
+  .stl-canvas-wrapper {
+    height: 400px;
+  }
+
+  .stl-viewer-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stl-control-hint {
+    font-size: 0.75em;
+  }
+
+  .stl-file-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stl-select {
+    width: 100%;
+  }
+}
