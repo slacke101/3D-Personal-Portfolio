@@ -89,8 +89,8 @@ body::before {
   backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
-  gap: 3em;
-  padding: 1.5em 0;
+  gap: 2em;
+  padding: 0.8em 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -102,12 +102,12 @@ body::before {
 .App-link {
   color: #fff;
   font-weight: 500;
-  font-size: 1.1em;
+  font-size: 0.95em;
   border-bottom: 2px solid transparent;
   transition: all 0.3s ease;
   text-decoration: none;
-  padding: 0.5em 1em;
-  letter-spacing: 1px;
+  padding: 0.4em 0.8em;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 
